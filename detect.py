@@ -3,7 +3,10 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import shutil
 
-shutil.rmtree("runs")
+try:
+    shutil.rmtree("runs")
+except FileNotFoundError:
+    pass
 
 file_name = sys.argv[1]
 os.system(f"yolo predict model='best.onnx' source={file_name}")
