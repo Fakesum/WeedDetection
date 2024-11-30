@@ -1,4 +1,4 @@
-import os, sys, pathlib
+import os, sys
 from PIL import Image
 import matplotlib.pyplot as plt
 import shutil
